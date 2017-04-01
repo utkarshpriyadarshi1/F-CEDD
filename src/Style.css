@@ -1,0 +1,64 @@
+.title{
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-text-alignment: left;
+    -fx-font-weight: bold;
+    -fx-padding: 0, 20, 0, 20;
+}
+.titleBox{
+    -fx-background-color: #01a88f;
+}
+.tab-header-background {
+    -fx-background-color: #d0dddb;
+}
+/*
+.tab-header-area{
+    -fx-padding: 25 25 0 25;
+}*/
+.tab-label{
+/*
+    -fx-background-color: black;
+*/
+    -fx-text-fill: yellow;
+    -fx-font-weight: bold;
+}
+.tab-pane{
+    -fx-background-color: #d0dddb;
+    -fx-padding: 25;
+}
+.tab-content-area{
+    -fx-background-color: white;
+}
+.tab{
+    -fx-padding: 15 20 10 20;
+    -fx-background-color: #264f48;
+}
+.main{
+    -fx-padding: 15;
+}
+.subBox{
+    -fx-alignment: center;
+}
+.list{
+    -fx-min-width: 200;
+    -fx-min-height: 100;
+}
+.viewBtn{
+    -fx-min-width: 130px;
+}
+
+.inputBox{
+/*
+    -fx-alignment: left;
+*/
+    -fx-padding: 15;
+        -fx-border-color: lightgrey;
+
+}
+.outputBox{
+/*
+    -fx-alignment: right;
+*/
+    -fx-border-color: lightgrey;
+    -fx-padding: 15;
+}
