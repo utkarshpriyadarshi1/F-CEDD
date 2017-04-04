@@ -16,15 +16,20 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.util.List;
 
-public class ProgressBarIndicator extends Application {
+public class ProgressStatus {
 
-    public void start(Stage primaryStage) {
+    private static Label topLabel, mainLabel, fileLabel, bottomLabel;
 
-        Label topLabel = new Label("Compressing"+" from "+"Input Directiory"+" to "+"Output Directory");
-        Label mainLabel = new Label("Paused - 0% Complete");
-        Label fileLabel = new Label("File Name: "+"filename");
+    public void display(Stage primaryStage, String method, String inputPath, String outputPath, String currentFile, int currentTask, int totalTask) {
+
+        topLabel = new Label(method+" from "+inputPath+" to "+outputPath);
+
+        mainLabel = new Label("Paused - "+(100 - currentTask/totalTask)+" % Completed");
+
+        fileLabel = new Label("File Name : "+currentFile);
         fileLabel.setTextFill(Color.GREEN);
-        Label bottomLabel = new Label("Items Remaining: "+"12,223");
+
+        bottomLabel = new Label("Items Remaining: "+(totalTask-currentTask));
 
         final ProgressBar progressBar = new ProgressBar(0);
         progressBar.setMinWidth(400);
@@ -33,9 +38,11 @@ public class ProgressBarIndicator extends Application {
         //Image cancelImage = new Image(getClass().getResourceAsStream("cancelBtn.png"));
         Button stopBtn = new Button();
         //stopBtn.setGraphic(new ImageView(cancelImage));
+
         stopBtn.setCancelButton(true);
         stopBtn.setMinHeight(30);
         stopBtn.setMinWidth(30);
+
         stopBtn.setOnAction(event ->
         {
             stopBtn.setDisable(true);
@@ -50,7 +57,7 @@ public class ProgressBarIndicator extends Application {
         pauseResumeBtn.setMinHeight(30);
         pauseResumeBtn.setMinWidth(30);
         pauseResumeBtn.setOnAction(event -> {
-            pauseResumeBtn.setText("|>");
+            pauseResumeBtn.setText("|>"); //TODO: set pause icon here instead of text
             progressBar.setProgress(0);
             stopBtn.setDisable(false);
             // Create a Task.
@@ -93,9 +100,5 @@ public class ProgressBarIndicator extends Application {
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        Application.launch(args);
     }
 }

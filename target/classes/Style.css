@@ -1,9 +1,9 @@
 .title{
-    -fx-font-size: 16px;
+    -fx-font: 16 arial;
     -fx-text-fill: white;
     -fx-text-alignment: left;
     -fx-font-weight: bold;
-    -fx-padding: 0, 20, 0, 20;
+    -fx-padding: 2 20 2 20;
 }
 .titleBox{
     -fx-background-color: #01a88f;
