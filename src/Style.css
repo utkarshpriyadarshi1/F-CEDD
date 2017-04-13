@@ -44,21 +44,20 @@
     -fx-min-height: 100;
 }
 .viewBtn{
-    -fx-min-width: 130px;
+    -fx-min-width: 100px;
 }
 
 .inputBox{
-/*
-    -fx-alignment: left;
-*/
     -fx-padding: 15;
-        -fx-border-color: lightgrey;
-
+    -fx-border-color: lightgrey;
 }
 .outputBox{
-/*
-    -fx-alignment: right;
-*/
-    -fx-border-color: lightgrey;
-    -fx-padding: 15;
+   -fx-border-color: lightgrey;
+   -fx-padding: 15;
+}
+
+.mainBtn{
+    -fx-padding: 20px;
+    -fx-font: 18 arial;
+    -fx-min-width: 200;
 }

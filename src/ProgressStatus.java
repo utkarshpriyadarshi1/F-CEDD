@@ -20,15 +20,13 @@ public class ProgressStatus {
 
     private static Label topLabel, mainLabel, fileLabel, bottomLabel;
 
-    public void display(Stage primaryStage, String method, String inputPath, String outputPath, String currentFile, int currentTask, int totalTask) {
+    public void display(String method, String inputPath, String outputPath, String currentFile, int currentTask, int totalTask) {
+        Stage primaryStage = new Stage();
 
         topLabel = new Label(method+" from "+inputPath+" to "+outputPath);
-
         mainLabel = new Label("Paused - "+(100 - currentTask/totalTask)+" % Completed");
-
         fileLabel = new Label("File Name : "+currentFile);
         fileLabel.setTextFill(Color.GREEN);
-
         bottomLabel = new Label("Items Remaining: "+(totalTask-currentTask));
 
         final ProgressBar progressBar = new ProgressBar(0);
