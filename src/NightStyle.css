@@ -1,6 +1,6 @@
 .title{
     -fx-font: 16 arial;
-    -fx-text-fill: white;
+    -fx-text-fill: black;
     -fx-text-alignment: left;
     -fx-font-weight: bold;
     -fx-padding: 2 20 2 20;
@@ -8,6 +8,7 @@
 .titleBox{
     -fx-background-color: #01a88f;
 }
+
 .tab-header-background {
     -fx-background-color: #d0dddb;
 }
@@ -16,23 +17,33 @@
     -fx-padding: 25 25 0 25;
 }*/
 .tab-label{
-/*
-    -fx-background-color: black;
-*/
-    -fx-text-fill: yellow;
-    -fx-font-weight: bold;
+   -fx-text-fill: yellow;
+   -fx-font-weight: bold;
 }
 .tab-pane{
     -fx-background-color: #d0dddb;
     -fx-padding: 25;
 }
 .tab-content-area{
-    -fx-background-color: white;
+    -fx-background-color: black;
 }
+
 .tab{
     -fx-padding: 15 20 10 20;
     -fx-background-color: #264f48;
 }
+.tab:hover .tab-label{
+             -fx-text-fill: white;
+}
+.tab:selected{
+    -fx-background-color: black;
+}
+.tab:selected .tab-label{
+    -fx-text-fill: white;
+    -fx-border-color: black;
+}
+
+
 .main{
     -fx-padding: 15;
 }
@@ -43,8 +54,15 @@
     -fx-min-width: 200;
     -fx-min-height: 100;
 }
+
 .viewBtn{
     -fx-min-width: 100px;
+    -fx-text-fill: yellow;
+    -fx-background-color:  #01a669;
+}
+.viewBtn: hover, .subBtn: hover{
+    -fx-text-fill: white;
+    -fx-background-color:  #01a669;
 }
 
 .inputBox{
@@ -60,4 +78,16 @@
     -fx-padding: 20px;
     -fx-font: 18 arial;
     -fx-min-width: 200;
+    -fx-background-color:  #01a88f;
+}
+.mainBtn: hover{
+    -fx-text-fill: yellow;
+    -fx-background-color:  #01a86a;
+}
+
+.okBtn{
+    -fx-font: 16 arial;
+    -fx-label-padding: 1 20 1 20;
+    -fx-text-fill: yellow;
+    -fx-background-color:  #01a669;
 }

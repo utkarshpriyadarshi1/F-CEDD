@@ -9,25 +9,27 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class AlertBox {
+class AlertBox {
+    private static String message;
+    private static String title;
+    private static Boolean status;
 
-    public void display(Boolean status, String operation) {
+    AlertBox(String title, String msg, Boolean status) {
+        AlertBox.message = msg;
+        AlertBox.title = title;
+        AlertBox.status = status;
+    }
 
+    void display() {
         Stage window = new Stage();
+        String tempString;
 
-        Image img;
-        String message;
-        String title;
+        if (status)
+            tempString = "icons/ok.png";
+        else
+            tempString = "icons/error.png";
 
-        if (status) {
-            img = new Image("icons/success4.png");
-            title = "Operation successful";
-            message = "File(s) " + operation + " has been successfully completed!!";
-        } else {
-            img = new Image("icons/error1.png");
-            message = "File(s) " + operation + " has failed!!";
-            title = "Operation unsuccessful";
-        }
+        Image img = new Image(tempString);
         ImageView image = new ImageView(img);
         image.setFitWidth(60);
         image.setFitHeight(60);
@@ -37,7 +39,7 @@ public class AlertBox {
         label.setStyle("-fx-font: 22 arial");
 
         Button btn = new Button("OK");
-        btn.setStyle("-fx-font: 16 arial;-fx-label-padding: 1 20 1 20");
+        btn.getStyleClass().add("okBtn");
         btn.setDefaultButton(true);
         btn.setOnAction(e -> window.close());
 
@@ -49,6 +51,7 @@ public class AlertBox {
         layout.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(layout, 650, 150);
+        scene.getStylesheets().add("DayStyle.css");
 
         window.setTitle(title);
         window.initModality(Modality.APPLICATION_MODAL);
@@ -58,4 +61,3 @@ public class AlertBox {
         window.show();
     }
 }
-
