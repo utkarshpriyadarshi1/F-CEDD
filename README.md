@@ -13,4 +13,4 @@ F-CEDD allows you to perform operation on your file and folders to compress them
 * Day/Night Mode.
 * Mute Notifications.
 * Completed tasks history.
-* Avialable for Windows/Linux based OS.
+* Available for Windows/Linux based OS.
