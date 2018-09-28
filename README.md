@@ -9,7 +9,7 @@ F-CEDD allows you to perform operation on your file and folders to compress them
 
 * Simple and eligent 
 * AES 284 bit encrypt/decrypt
-* No ADDS
+* No ADDS, No hidden charges.
 
 <h1>System Requirements</h1>
-* Windows based OS
+* Windows/Linux based OS
