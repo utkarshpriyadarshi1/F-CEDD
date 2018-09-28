@@ -5,9 +5,11 @@ File Compressor, Encryptor, Decryptor and Decompressor
 F-CEDD allows you to perform operation on your file and folders to compress them.
 
 
-<h2>Features</h2>
+<h1>Features</h1>
 
 * Simple and eligent 
 * AES 284 bit encrypt/decrypt
 * No ADDS
 
+<h1>System Requirements</h1>
+* Windows based OS
