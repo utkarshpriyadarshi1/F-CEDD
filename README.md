@@ -11,6 +11,7 @@ F-CEDD allows you to perform operation on your file and folders to compress them
 * Easy to use and understand.
 * AES 284 bit encrypt/decrypt.
 * No ADDS, No hidden charges.
+* Multi tasking.
 * Day/Night Mode.
 * Mute Notifications.
 * Completed tasks history.
