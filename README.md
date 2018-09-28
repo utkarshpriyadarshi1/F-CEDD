@@ -1,6 +1,6 @@
 File Compressor, Encryptor, Decryptor and Decompressor
 
-<Title>Introduction</TItle>
+<big>Introduction</big>
 
 F-CEDD allows you to perform operation on your file and folders to compress them.
 
