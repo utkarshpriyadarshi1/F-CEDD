@@ -9,6 +9,7 @@ F-CEDD allows you to perform operation on your file and folders to compress them
 
 * Simple and elegant look.
 * Easy to use and understand.
+* Support Zip, tar, xzip, bzip extensions.
 * AES 284 bit encrypt/decrypt.
 * No ADDS, No hidden charges.
 * Multi tasking.
